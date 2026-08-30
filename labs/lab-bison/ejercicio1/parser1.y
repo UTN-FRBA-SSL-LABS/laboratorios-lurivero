@@ -27,7 +27,7 @@ input:
     /* vacío */
   | input linea
   ;
-
+ //printf que imprima el resultado con el formato "= <valor>\n"
 linea:
     exp '\n'   { printf("= %d\n", $1); }
   ;
