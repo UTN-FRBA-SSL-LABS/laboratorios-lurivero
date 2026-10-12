@@ -377,7 +377,7 @@ echo "7" | ./scanner2      # → Numero: 7
 make clean                 # elimina scanner2 y lex.yy.c
 ```
 
----
+---cde
 
 ### Ejercicio 3 — Makefile con Flex + Bison (25 pts)
 
@@ -504,7 +504,7 @@ Abrí `ejercicio4/Makefile` y completá los cinco TODOs.
 #### TODO 1 — Definir `SRCS`
 
 ```makefile
-SRCS :=
+SRCS :=main.c operaciones.c
 ```
 
 `SRCS` (_sources_) es la variable que lista todos los archivos fuente `.c` del
@@ -625,7 +625,7 @@ ejecución y la otra, ¿qué hace Make en la segunda ejecución?
 Opciones: `RECOMPILA` / `NO_RECOMPILA` / `DA_ERROR`
 
 ```
-P1=???
+P1=NO_RECOMPILA
 ```
 
 ---
@@ -639,7 +639,7 @@ llamado `clean`?
 Opciones: `SI` / `NO`
 
 ```
-P2=???
+P2=NO
 ```
 
 ---
@@ -652,7 +652,7 @@ P2=???
 Opciones: `PARA_CREAR_ARCHIVOS` / `PARA_EVITAR_CONFLICTOS_DE_NOMBRES` / `PARA_COMPILAR_MAS_RAPIDO`
 
 ```
-P3=???
+P3=PARA_EVITAR_CONFLICTOS_DE_NOMBRES
 ```
 
 ---
