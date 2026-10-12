@@ -219,7 +219,7 @@ Abrí `ejercicio1/Makefile` y completá los cuatro TODOs.
 #### TODO 1 — Definir la variable `CC`
 
 ```makefile
-CC :=
+CC :=gcc
 ```
 
 `CC` es la variable estándar de Make para el **compilador de C**. Por convención
@@ -234,7 +234,7 @@ esta línea y todo el Makefile sigue funcionando sin tocar nada más.
 #### TODO 2 — Definir la variable `CFLAGS`
 
 ```makefile
-CFLAGS :=
+CFLAGS :=-Wall
 ```
 
 `CFLAGS` (_C Flags_) contiene las opciones que le pasamos al compilador.
@@ -251,7 +251,7 @@ impiden la compilación, pero señalan código potencialmente problemático
 
 ```makefile
 $(PROGRAMA): suma.c
-	# Escribí el comando aquí
+	$(CC) $(CFLAGS) suma,c -o $(PROGRAMA)
 ```
 
 Este es el corazón del Makefile: el comando que convierte `suma.c` en el ejecutable.
@@ -274,7 +274,7 @@ gcc generaría un ejecutable llamado `a.out` por defecto.
 
 ```makefile
 clean:
-	# Escribí el comando aquí
+	rm -f $(PROGRAMA)
 ```
 
 Escribí el comando que elimina el ejecutable generado. Usá `rm -f $(PROGRAMA)`.
